@@ -26,13 +26,13 @@ $('a').children('img').on('mouseover',function() {
 	});
 	$('a').parent().children('h5').css({
 		transform: 'translate(0px,-100px)'
-	});
+	})
 });
 
 // mainpage - sliding up and down menu and steps 
 $('.tag1').children('h6').click(function() {
 	$(this).parent().slideUp();
-});
+})
 
 $('.firsttable').children('h2').click(function() {
  $('.tag1').slideDown();
@@ -40,7 +40,7 @@ $('.firsttable').children('h2').click(function() {
 
 $('.tag2').children('h6').click(function() {
 	$(this).parent().slideUp();
-});
+})
 
 $('.secondtable').children('h2').click(function() {
  $('.tag2').slideDown();
@@ -48,7 +48,7 @@ $('.secondtable').children('h2').click(function() {
 
 $('.tag3').children('h6').click(function() {
 	$(this).parent().slideUp();
-});
+})
 
 $('.thirdtable').children('h2').click(function() {
  $('.tag3').slideDown();
@@ -87,7 +87,7 @@ $('.column').click(function() {
 	calculate();
 	//billing 
 	bill();
-});
+})
 
 
 
@@ -96,7 +96,7 @@ var bill = function(column){
 	$('ul').parent().children('.billsubtotal').text("subtotal amount: $"+subTotal);
 	$('ul').parent().children('.billtax').text("tax amount: $"+taxAmount);
 	$('ul').parent().children('.billtotal').text("total amount: $"+total);
-};
+}
 
 
 //calculating function
@@ -124,36 +124,36 @@ var reset = function(){
 	//cancel billing
 	$('ul').children('li').text('');
 	$('ul').children('li').remove();
-};
+}
 
 //restart button
 $('.restart').click(function() {
 		reset();
 		calculate();
 		bill();
-});
+})
 
 
 //next customer button 
 $('.next').click(function() {
 	var response = window.confirm("Are you going to cancel current work?");
- 	if (response===true) {
+ 	if (response==true) {
 	reset();
 	calculate();	
 	bill();
 	} else {
 		alert("Continued");
 	}
-});
+})
 
 //complete
 $('.complete').click(function() {
 	var complete = window.confirm("Save and process?");
-	if (complete===true) {
+	if (complete==true) {
 		window.alert("completed");
 		reset();
 		calculate();
 		bill();
 	}	
-});
+})
 
