@@ -80,7 +80,7 @@ $('.column').click(function() {
 	//calculate   
 	currentPrice = parseFloat($(this).children('span').text());
 	subTotal += currentPrice;
-	subTotal = Math.round((subTotal*100))/100
+	subTotal = Math.round((subTotal*100))/100;
 	taxAmount = Math.round((subTotal * taxRate/100)*100)/100;
 	total = Math.round((taxAmount + subTotal)*100)/100;
 	console.log("subtotal is " +subTotal);
